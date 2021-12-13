@@ -15,7 +15,7 @@ spec:
         app: my-app
     spec:
       containers:
-        - image: quay.io/openshift-pipeline/ui:latest
+        - image: quay.io/openshift-pipeline/my-app:latest
           imagePullPolicy: Always
           name: my-app
           ports:
