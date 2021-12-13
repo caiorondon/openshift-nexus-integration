@@ -1,5 +1,6 @@
-FROM anapsix/alpine-java
+FROM tomcat:8.0
 
-COPY 1.3.6.RELEASE.jar /home/1.3.6.RELEASE.jar
-
-CMD ["java","-jar","/home/1.3.6.RELEASE.jar"]
+EXPOSE 8080
+RUN rm -fr /usr/local/tomcat/webapps/ROOT
+RUN ls -la 
+COPY target/webapp /usr/local/tomcat/webapps/ROOT
